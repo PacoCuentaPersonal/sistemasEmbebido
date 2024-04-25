@@ -1,0 +1,6 @@
+.body {
+    background-image: url("/static/imagenes/maquinas-bebidas.png");
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el cuerpo */
+    background-position: center; /* Centra la imagen en el cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}

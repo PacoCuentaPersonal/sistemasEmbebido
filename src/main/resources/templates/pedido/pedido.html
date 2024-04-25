@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <link rel="stylesheet" data-th-href="@{'output.css'}">
+    <meta charset="UTF-8">
+    <title>Pedidos</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-image: url('imagenes/background.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        /* Agregamos un estilo personalizado para el efecto de cristal */
+
+        .glass-effect {
+            background-color: rgba(255, 255, 255, 0.25); /* Color de fondo semi-transparente */
+            backdrop-filter: blur(5px); /* Aplicamos un desenfoque al fondo */
+            margin-right: 60px;
+
+        }
+        .glass-effect2 {
+            background-color: rgba(255, 255, 255, 0.5); /* Color de fondo semi-transparente */
+            backdrop-filter: blur(5px); /* Aplicamos un desenfoque al fondo */
+
+        }
+        .posicion{
+            left: 170px;
+            bottom: 20px;
+        }
+
+    </style>
+</head>
+<body class="bg-cover bg-center" >
+<div class="h-screen flex items-center justify-end ">
+    <div class="relative flex flex-col justify-between space-y-4 glass-effect min-w-2/5 h-3/4 p-8  rounded-lg shadow-lg">
+        <!-- Contenido dentro  del div con efecto de cristal -->
+        <div class=" flex  h-14 justify-around items-center    rounded-lg font-bold text-white">
+            <div style="height: 40px; width: 40px" class="rounded-full bg-blue-700 flex items-center justify-center text-center">
+                <span class="inline-block align-middle">JC</span>
+            </div>
+            <span> Jianfranco Carlos Sanchez</span>
+            <button style="height: 40px; width: 40px" class="rounded-full  bg-green-600 text-white font-bold "> X </button>
+        </div>
+        <div class=" flex-auto h-32 rounded-lg font-bold text-white">
+            <div x-data="{ openTab: 1 }" class="p-8">
+                <div class="max-w-md mx-auto">
+                    <div class="mb-4 flex space-x-4 p-2 glass-effect2 rounded-lg shadow-md">
+                        <button x-on:click="openTab = 1" :class="{ ' bg-orange-400 text-white': openTab === 1 }" class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">Ultra grande 🔥</button>
+                        <button x-on:click="openTab = 2" :class="{ ' bg-orange-400 text-white': openTab === 2 }" class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">Mediana 🍻</button>
+                        <button x-on:click="openTab = 3" :class="{ ' bg-orange-400 text-white': openTab === 3 }" class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">Pequeña 🍺</button>
+                    </div>
+
+                    <div x-show="openTab === 1" class="transition-all duration-300 glass-effect2 p-4 rounded-lg shadow-md border-l-4  border-orange-500">
+                        <h2 class="text-gray-950 text-lg font-semibold mb-2  ">1000 Ml</h2>
+                        <p class="text-gray-700">Sumérgete en el sabor profundo y refrescante de nuestra cerveza de 1000 ml. Perfecta para compartir momentos memorables con amigos y familia. Disfruta de la calidad en cada sorbo</p>
+                    </div>
+
+                    <div x-show="openTab === 2" class="transition-all duration-300 glass-effect2 p-4 rounded-lg shadow-md border-l-4  border-orange-500">
+                        <h2 class="text-gray-950 text-lg font-semibold mb-2  ">650 Ml</h2>
+                        <p class="text-gray-700">Descubre la intensidad equilibrada en cada sorbo de nuestra cerveza de 650 ml. Una opción versátil y satisfactoria para acompañar tus momentos especiales. ¡Siente el sabor único!</p>
+                    </div>
+
+                    <div x-show="openTab === 3" class="transition-all duration-300 glass-effect2 p-4 rounded-lg shadow-md border-l-4  border-orange-500">
+                        <h2 class=" text-gray-950 text-lg font-semibold mb-2  ">320 Ml</h2>
+                        <p class="text-gray-700">Saborea la frescura concentrada de nuestra cerveza de 320 ml. Ideal para aquellos que buscan disfrutar de un gran sabor en una botella compacta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class=" absolute posicion w-2/5 h-12 bg-orange-400 rounded-lg font-black">Realiza el pedido 😎!</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</body>
+</html>
