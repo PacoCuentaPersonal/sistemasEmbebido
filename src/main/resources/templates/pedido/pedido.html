@@ -41,9 +41,15 @@
             <div style="height: 40px; width: 40px" class="rounded-full bg-blue-700 flex items-center justify-center text-center">
                 <span class="inline-block align-middle">JC</span>
             </div>
-            <span> Jianfranco Carlos Sanchez</span>
-            <button style="height: 40px; width: 40px" class="rounded-full  bg-green-600 text-white font-bold "> X </button>
-        </div>
+            <div>
+                <input type="text" id="company" class=" glass-effect2 px-4 border h-12 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ingrese el nombre del propiertario del pedido" required />
+            </div>
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Choose plan
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </button>        </div>
         <div class=" flex-auto h-32 rounded-lg font-bold text-white">
             <div x-data="{ openTab: 1 }" class="p-8">
                 <div class="max-w-md mx-auto">
